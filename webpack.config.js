@@ -9,9 +9,10 @@ module.exports = {
       { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader',
         query: {
           presets: ['react', 'es2015', 'stage-0'],
-          plugins: ['../../../../../express-webpack-template/babelRelayPlugin.js']
+          plugins: [__dirname +'/babelRelayPlugin.js']
         }
       }
     ]
   }
 };
+console.log('dirname', __dirname);
